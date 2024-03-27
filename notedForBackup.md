@@ -231,3 +231,22 @@ num3 = float(input("Please enter third number:"))
 sorted_nums = sorted([num1,num2,num3])
 
 print("The numbers in increasing order are:",sorted_nums[0],sorted_nums[1],sorted_nums[2])
+
+
+
+# 4.10
+
+import random
+
+# Yüzden küçük rastgele iki sayı üretilip hafızaya alınır.
+number1 = random.randint(0, 99)
+number2 = random.randint(0, 99)
+
+# Kullanıcıdan hesaplama sonucu istenir.
+answer = eval(input("What is " + str(number1) + " * " + str(number2) + "? "))
+
+# Kullanıcan alınan cevap kontrol edilip kullanıcıya çıktı verilir.
+if number1 * number2 == answer:
+    print("You are correct!")
+else:
+    print("Your answer is wrong.\n", number1, '*', number2, "is", number1 * number2, '.')
