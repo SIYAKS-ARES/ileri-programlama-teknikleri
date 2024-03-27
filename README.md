@@ -1,2 +1,2 @@
 # IPT
- İleri Programlama Teknikleri Ödevleri
+ İleri Programlama Teknikleri Python Ödevleri
