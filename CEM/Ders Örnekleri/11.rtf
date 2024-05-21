@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9580\viewh17460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # Example 1\
+\
+NUMBER_OF_ELEMENTS = 5\
+numbers = [] # list operator\
+sum = 0\
+for i in range(NUMBER_OF_ELEMENTS):\
+    value = eval(input("Enter a new number: "))\
+    numbers.append(value)\
+    sum = sum + value\
+average = sum / NUMBER_OF_ELEMENTS\
+count = 0\
+for i in range(NUMBER_OF_ELEMENTS):\
+    if numbers[i] > average: #index = 0, 1, 2, 3, 4\
+        count += 1\
+print("Average is", average)\
+print("Number of elements above the average is", count)\
+print("Length of list", len(numbers))\
+print("Min element of list", min(numbers))\
+print("Max element of list", max(numbers))\
+\
+\'91\'92\'92\
+NUMBER_OF_ELEMENTS = 5\
+numbers = [] # list operator\
+total = 0\
+for i in range(NUMBER_OF_ELEMENTS):\
+    value = float(input("Enter a new number: "))\
+    numbers.append(value)\
+    total = total + value\
+average = total / NUMBER_OF_ELEMENTS\
+count = 0\
+for i in range(NUMBER_OF_ELEMENTS):\
+    if numbers[i] > average: #index = 0, 1, 2, 3, 4\
+        count += 1\
+print("Average is", average)\
+print("Number of elements above the average is", count)\
+print("Length of list", len(numbers))\
+print("Min element of list", min(numbers))\
+print("Max element of list", max(numbers))\
+\'91\'92\'92\
+\
+# Example 2\
+\
+list3 = list(["red", "green", "blue"])\
+print("Min element of list", min(list3))\
+print("Max element of list", max(list3))\
+\
+# Example 3\
+\
+list1 = [2, 3, 4, 1, 32, 4]\
+list1.append(19)\
+print(list1)\
+print(list1.count(4))\
+list2 = [99, 54]\
+list1.extend(list2)\
+print(list1)\
+list1.insert(1, 25)\
+print(list1)\
+\
+# Example 4\
+\
+list1 = [2, 25, 3, 4, 1, 32, 4, 19, 99, 54]\
+list1.pop(2)\
+list1.pop()\
+list1.remove(32)\
+list1.reverse()\
+print(list1)\
+list1.sort()\
+print(list1)\
+\
+items = "Jane,John,Peter,Susan".split(",")\
+print(items)\
+\
+\'91\'92\'92\
+pop(): This is a built-in function in Python that removes and returns an element at the given index from the list. If no index is specified, pop() removes and returns the last item in the list. In your code:\
+list1.pop(2) removes the third element (since Python uses 0-based indexing), which is 3 in this case.\
+list1.pop() without an argument removes the last element, which is 54 after the previous operation.\
+remove(): This function removes the first occurrence of a value in the list. list1.remove(32) removes the first 32 found in the list.\
+reverse(): This function reverses the order of the items in the list. list1.reverse() reverses the entire list.\
+sort(): This function sorts the items in the list in ascending order (from low to high). list1.sort() sorts the list.\
+split(): This is a string method that splits a string into a list where each word is a list item. The split occurs at the specified separator. In your code, "Jane,John,Peter,Susan".split(",") splits the string at each comma, resulting in a list of names.\
+Here\'92s a step-by-step breakdown of what your code does:\
+\
+list1 = [2, 25, 3, 4, 1, 32, 4, 19, 99, 54]\
+list1.pop(2)  # Removes the third element (3), list1 is now [2, 25, 4, 1, 32, 4, 19, 99, 54]\
+list1.pop()  # Removes the last element (54), list1 is now [2, 25, 4, 1, 32, 4, 19, 99]\
+list1.remove(32)  # Removes the first occurrence of 32, list1 is now [2, 25, 4, 1, 4, 19, 99]\
+list1.reverse()  # Reverses the list, list1 is now [99, 19, 4, 1, 4, 25, 2]\
+print(list1)  # Prints the reversed list\
+list1.sort()  # Sorts the list in ascending order, list1 is now [1, 2, 4, 4, 19, 25, 99]\
+print(list1)  # Prints the sorted list\
+\
+items = "Jane,John,Peter,Susan".split(",")  # Splits the string into a list of names\
+print(items)  # Prints the list of names\
+\'91\'92\'92}

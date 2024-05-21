@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10520\viewh17460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # Code cell 1\
+print(4.5 * 1.5 - 2.5)\
+\
+# Code cell 2\
+radius = eval(input("Enter a value for radius: "))\
+area = 3.14 * radius * radius\
+print(area)\
+\
+\'91\'92\'92\
+In this code, eval() is a built-in Python function used to evaluate the expression passed to it as a string and returns the result.\
+\
+Here's how it works in the context of your code:\
+\
+input("Enter a value for radius: ")\
+prompts the user to enter a value for the radius.\
+Whatever the user inputs is treated as a string.\
+eval() takes this string and evaluates it as a Python expression.\
+If the user enters, for example, "5",\
+eval() will evaluate it to the integer 5.\
+The result of eval() is then assigned to the variable radius.\
+So, eval() here is used to convert the user input (which is a string)\
+into a numerical value (specifically, an integer or float), which can then be used for calculations like finding the area of a circle.\
+\'92\'92\'92\
+\
+# Code cell 3\
+radius = eval(input("Enter a value for radius: "))\
+if radius > 0:\
+    if radius < 10:\
+        print("Number is positive and less than 10")\
+else:\
+    print("Number is negative")\
+print("Operation completed")\
+\
+# Code cell 4\
+score = eval(input("Enter the score: "))\
+if score >= 90.0:\
+    grade = 'A'\
+elif score >= 80.0:\
+    grade = 'B'\
+elif score >= 70.0:\
+    grade = 'C'\
+elif score >= 60.0:\
+    grade = 'D'\
+else:\
+    grade = 'F'\
+print(grade)\
+}

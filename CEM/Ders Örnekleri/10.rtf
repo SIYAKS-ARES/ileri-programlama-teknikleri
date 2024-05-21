@@ -1,0 +1,158 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9580\viewh17460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 import random\
+\
+# Function to create a predefined matrix\
+def create_predefined_matrix():\
+    # Define the matrix\
+    matrix = [\
+        [1, 2, 3, 4, 5],\
+        [6, 7, 0, 0, 0],\
+        [0, 1, 0, 0, 0],\
+        [1, 0, 0, 0, 8],\
+        [0, 0, 9, 0, 3]\
+    ]\
+    return matrix\
+\
+# Function to access a specific element in the matrix\
+def access_specific_element(matrix):\
+    # Access and return the element at row 4, column 2\
+    return matrix[4][2]\
+\
+# Function to create a matrix based on user input\
+def create_matrix_user_input():\
+    # Get the number of rows and columns from the user\
+    numberOfRows = int(input("Enter the number of rows: "))\
+    numberOfColumns = int(input("Enter the number of columns: "))\
+    # Initialize an empty matrix\
+    matrix = []\
+    # Loop over the rows\
+    for row in range(numberOfRows):\
+        # Add an empty row to the matrix\
+        matrix.append([])\
+        # Loop over the columns\
+        for column in range(numberOfColumns):\
+            # Get a value from the user and add it to the current row\
+            value = int(input("Enter an element and press Enter: "))\
+            matrix[row].append(value)\
+    return matrix\
+\
+# Function to create a matrix with random values\
+def create_random_matrix():\
+    # Get the number of rows and columns from the user\
+    numberOfRows = int(input("Enter the number of rows: "))\
+    numberOfColumns = int(input("Enter the number of columns: "))\
+    # Initialize an empty matrix\
+    matrix = []\
+    # Loop over the rows\
+    for row in range(numberOfRows):\
+        # Add an empty row to the matrix\
+        matrix.append([])\
+        # Loop over the columns\
+        for column in range(numberOfColumns):\
+            # Generate a random number and add it to the current row\
+            matrix[row].append(random.randint(0, 100))\
+    return matrix\
+\
+# Function to print a matrix\
+def print_matrix(matrix):\
+    # Loop over the rows\
+    for row in range(len(matrix)):\
+        # Loop over the columns\
+        for column in range(len(matrix[row])):\
+            # Print the current element, followed by a space\
+            print(matrix[row][column], end=" ")\
+        # Print a newline to move to the next row\
+        print()\
+\
+# Function to calculate the sum of all elements in a matrix\
+def calculate_matrix_sum(matrix):\
+    # Initialize the total sum to 0\
+    total = 0\
+    # Loop over the rows\
+    for row in range(len(matrix)):\
+        # Loop over the columns\
+        for column in range(len(matrix[row])):\
+            # Add the current element to the total sum\
+            total += matrix[row][column]\
+    return total\
+\
+# Function to calculate the sum of the digits in a number\
+def sum_digits(number):\
+    # Initialize the total sum to 0\
+    total = 0\
+    # While the number is not 0\
+    while number != 0:\
+        # Get the last digit of the number\
+        digit = number % 10\
+        # Add the digit to the total sum\
+        total += digit\
+        # Remove the last digit from the number\
+        number //= 10\
+    return total\
+\
+# Function to create a matrix with random values based on user input\
+def create_matrix_with_user_input():\
+    # Get the number of rows and columns from the user\
+    numberOfRows = int(input("Enter the number of rows: "))\
+    numberOfColumns = int(input("Enter the number of columns: "))\
+    # Initialize an empty matrix\
+    matrix = []\
+    # Loop over the rows\
+    for row in range(numberOfRows):\
+        # Add an empty row to the matrix\
+        matrix.append([])\
+        # Loop over the columns\
+        for column in range(numberOfColumns):\
+            # Generate a random number and add it to the current row\
+            matrix[row].append(random.randint(0, 10))\
+    return matrix\
+\
+# Main function\
+def main():\
+    # Create a predefined matrix\
+    predefined_matrix = create_predefined_matrix()\
+\
+    # Access a specific element in the predefined matrix\
+    specific_element = access_specific_element(predefined_matrix)\
+    print("Specific element:", specific_element)\
+\
+    # Create a matrix based on user input\
+    user_input_matrix = create_matrix_user_input()\
+    print("User input matrix:")\
+    print_matrix(user_input_matrix)\
+\
+    # Create a matrix with random values\
+    random_matrix = create_random_matrix()\
+    print("Random matrix:")\
+    print_matrix(random_matrix)\
+\
+    # Print the random matrix\
+    print("Random matrix:")\
+    print_matrix(random_matrix)\
+\
+    # Calculate the sum of all elements in the random matrix\
+    random_matrix_sum = calculate_matrix_sum(random_matrix)\
+    print("Sum of all elements in random matrix:", random_matrix_sum)\
+\
+    # Calculate the sum of the digits in a number\
+    number = int(input("Enter a number: "))\
+    digits_sum = sum_digits(number)\
+    print("Sum of digits in number:", digits_sum)\
+\
+    # Perform matrix operations with user input\
+    user_input_matrix = create_matrix_with_user_input()\
+    print("User input matrix:")\
+    print_matrix(user_input_matrix)\
+    user_input_matrix_sum = calculate_matrix_sum(user_input_matrix)\
+    print("Sum of all elements in user input matrix:", user_input_matrix_sum)\
+\
+# If this script is the main script, run the main function\
+if __name__ == "__main__":\
+    main()\
+}

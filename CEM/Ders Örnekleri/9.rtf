@@ -1,0 +1,239 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9580\viewh17460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #Cell 1\
+\
+def sum(a, b):\
+    return a + b\
+\
+def printMessage():\
+    print("\uc0\u304 slem tamamlandi")\
+\
+sum(5, 6)\
+printMessage()\
+print("Girilen sayilarin toplami = ", sum(5, 6))\
+print("Islem Ozeti = ", printMessage())\
+result = sum(5, 6)\
+print("Sonuc = ", result)\
+resultOut = printMessage()\
+print(resultOut)\
+\
+\
+def sumNumbers(s1, s2):\
+    sum = 0\
+    for i in range(s1, s2 + 1):\
+        sum += i\
+    return sum\
+\
+def main():\
+    s1 = eval(input("\uc0\u304 lk deger giriniz : "))\
+    s2 = eval(input("\uc0\u304 kinci deger giriniz : "))\
+    print("Girilen iki araliktaki sayilarin toplami = ", sumNumbers(s1, s2))\
+\
+main()\
+\
+\'91\'92\'92\
+def sum(a, b):\
+    return a + b\
+\
+def printMessage():\
+    return "\uc0\u304 slem tamamlandi"\
+\
+print("Girilen sayilarin toplami = ", sum(5, 6))\
+print("Islem Ozeti = ", printMessage())\
+result = sum(5, 6)\
+print("Sonuc = ", result)\
+resultOut = printMessage()\
+print(resultOut)\
+\
+def sumNumbers(s1, s2):\
+    total = 0\
+    for i in range(s1, s2 + 1):\
+        total += i\
+    return total\
+\
+def main():\
+    s1 = int(input("\uc0\u304 lk deger giriniz : "))\
+    s2 = int(input("Ikinci deger giriniz : "))\
+    print("Girilen iki araliktaki sayilarin toplami = ", sumNumbers(s1, s2))\
+\
+main()\
+\'91\'92\'92\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 #Cell 2\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 def sumDigit(sayi):\
+    sum = 0\
+    while sayi != 0:\
+        kalan = sayi % 10\
+        sum += kalan\
+        sayi -= kalan\
+        sayi /= 10\
+    return sum\
+\
+def main():\
+    sayi = eval(input("Lutfen bir sayi giriniz : "))\
+    print("Girilen sayinin rakamlari toplami = ", int(sumDigit(sayi)))\
+\
+main()\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 #Cell 3\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 def getDizi(boyut):\
+    print("Dizi olusturuluyor....")\
+    dizi = []\
+    for i in range(boyut):\
+        dizi.append(random.randint(0, 10))\
+    print("Dizi rasgele sayilardan olusturuldu.")\
+    print(dizi)\
+    return dizi\
+\
+def printDizi(dizi):\
+    print("Dizi yazdiriliyor...")\
+    for i in range(len(dizi)):\
+        print(dizi[i], end="  ")\
+    print()\
+\
+def calculateDizi(dizi):\
+    print("Dizi uzerinde islem yapiliyor....")\
+    sum = 0\
+    for i in range(len(dizi)):\
+        sum += dizi[i]\
+    return sum\
+\
+def main():\
+    boyut = eval(input("Dizi boyutunu giriniz : "))\
+    dizi = getDizi(boyut)\
+    printDizi(dizi)\
+    print("Dizi elemanlarinin toplami = ", calculateDizi(dizi))\
+\
+main()\
+\
+\'91\'92\'92\
+import random\
+\
+def generate_random_array(size):\
+    print("Generating array....")\
+    array = [random.randint(0, 10) for _ in range(size)]\
+    print("Array created with random numbers.")\
+    print(array)\
+    return array\
+\
+def print_array(array):\
+    print("Printing array...")\
+    print('  '.join(map(str, array)))\
+\
+def calculate_array_sum(array):\
+    print("Calculating sum of array....")\
+    total = 0\
+    for num in array:\
+        total += num\
+    return total\
+\
+def main():\
+    size = int(input("Enter array size : "))\
+    array = generate_random_array(size)\
+    print_array(array)\
+    print("Sum of array elements = ", calculate_array_sum(array))\
+\
+main()\
+\'91\'92\'92\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 #Cell 4\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 import random\
+\
+def getMatrix():\
+    print("Matrix olusturuluyor....")\
+    rowNumber = eval(input("Satir gir : "))\
+    columnNumber = eval(input("Sutun gir : "))\
+    matrix = []\
+    for row in range(rowNumber):\
+        matrix.append([])\
+        for column in range(columnNumber):\
+            matrix[row].append(random.randint(0, 10))\
+    print("Matrix olusturuldu...")\
+    print(matrix)\
+    return matrix\
+\
+def printMatrix(matrix):\
+    print("Matrix Yazdiriliyor...")\
+    for row in range(len(matrix)):\
+        for column in range(len(matrix[row])):\
+            print(matrix[row][column], end="  ")\
+        print()\
+\
+def calculateMatrix(matrix):\
+    sumOdd = 0\
+    sumEven = 0\
+    for row in range(len(matrix)):\
+        for column in range(len(matrix[row])):\
+            if matrix[row][column] % 2 == 0:\
+                sumEven += matrix[row][column]\
+            else:\
+                sumOdd += matrix[row][column]\
+    return sumOdd, sumEven\
+\
+def main():\
+    matrix = getMatrix()\
+    printMatrix(matrix)\
+    tek, cift = calculateMatrix(matrix)\
+    print("Olusan Matrisin tek elemanlarinin toplami = ", tek)\
+    print("Olusan Matrisin cift elemanlarinin toplami = ", cift)\
+\
+main()\
+\
+\'91\'92\'92\
+import random\
+\
+def generate_random_matrix():\
+    print("Generating matrix....")\
+    row_number = int(input("Enter number of rows : "))\
+    column_number = int(input("Enter number of columns : "))\
+    matrix = [[random.randint(0, 10) for _ in range(column_number)] for _ in range(row_number)]\
+    print("Matrix created...")\
+    print(matrix)\
+    return matrix\
+\
+def print_matrix(matrix):\
+    print("Printing matrix...")\
+    for row in matrix:\
+        print('  '.join(map(str, row)))\
+\
+def calculate_odd_sum(matrix):\
+    print("Calculating sum of odd numbers in the matrix....")\
+    total_odd = 0\
+    for row in matrix:\
+        for element in row:\
+            if element % 2 != 0:\
+                total_odd += element\
+    return total_odd\
+\
+def calculate_even_sum(matrix):\
+    print("Calculating sum of even numbers in the matrix....")\
+    total_even = 0\
+    for row in matrix:\
+        for element in row:\
+            if element % 2 == 0:\
+                total_even += element\
+    return total_even\
+\
+def main():\
+    matrix = generate_random_matrix()\
+    print_matrix(matrix)\
+    odd_sum = calculate_odd_sum(matrix)\
+    even_sum = calculate_even_sum(matrix)\
+    print("Sum of odd elements in the matrix = ", odd_sum)\
+    print("Sum of even elements in the matrix = ", even_sum)\
+\
+main()\
+\'91\'92\'92\
+}
