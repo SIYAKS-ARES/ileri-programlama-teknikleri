@@ -117,6 +117,36 @@ if __name__ == "__main__":
         service = CarService(car)
         print(service.perform_service())  # Her araba türü için servis mesajı
 
+
+class Sekil:
+    def ciz(self):
+        raise NotImplementedError("Bu metot alt sınıflarda geçersiz kılınmalıdır.")
+
+class Dikdortgen(Sekil):
+    def __init__(self, en, boy):
+        self.en = en
+        self.boy = boy
+
+    def ciz(self):
+        return f"Dikdörtgen: {self.en} x {self.boy}"
+
+class Cember(Sekil):
+    def __init__(self, yaricap):
+        self.yaricap = yaricap
+
+    def ciz(self):
+        return f"Çember: Yarıçap {self.yaricap}"
+
+def sekil_ciz(s):
+    print(s.ciz())
+
+# Örnek Kullanım
+dikdortgen = Dikdortgen(4, 5)
+cember = Cember(3)
+
+sekil_ciz(dikdortgen)  # Çıktı: Dikdörtgen: 4 x 5
+sekil_ciz(cember)     # Çıktı: Çember: Yarıçap 3
+
 '''# vehicles.py
 
 from abc import ABC, abstractmethod
