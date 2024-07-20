@@ -74,16 +74,16 @@ with open("dosya.txt", "r") as file:
 # 3. Adım: Sınıflandırılmış sayıları ayrı dosyalara yazma
 
 # Asal sayıları asal.txt dosyasına yaz
-with open("asal.txt", "w") as file:
+with open("prime.txt", "w") as file:
     for prime in primes:
         file.write(f"{prime}\n")
 
 # Tek sayıları tek.txt dosyasına yaz
-with open("tek.txt", "w") as file:
+with open("odds.txt", "w") as file:
     for odd in odds:
         file.write(f"{odd}\n")
 
 # Çift sayıları cift.txt dosyasına yaz
-with open("cift.txt", "w") as file:
+with open("evens.txt", "w") as file:
     for even in evens:
         file.write(f"{even}\n")
