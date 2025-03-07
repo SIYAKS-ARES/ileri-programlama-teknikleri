@@ -148,7 +148,17 @@ print(matrix)'''
 points = [[4, 2], [1, 7], [4, 5], [1, 2], [1, 1], [4, 1]]
 points.sort()
 print(points)
-
+'''hours = [
+    [2, 7, 5, 3, 6, 1, 9, 4],
+    [0, 8, 6, 2, 9, 7, 3, 1],
+    [5, 4, 7, 6, 8, 2, 0, 9],
+    [1, 3, 9, 7, 4, 8, 2, 5],
+    [8, 0, 1, 9, 3, 6, 7, 4],
+    [2, 9, 5, 1, 8, 7, 3, 6],
+    [7, 4, 2, 8, 5, 9, 1, 0]
+]
+hours.sort()
+print(hours)'''
 
 matrix = []
 matrix.append(3 * [1]) # Adds 3 times 1 in the matrix

@@ -66,6 +66,7 @@ with open("dosya.txt", "r") as file:
         number = int(line.strip())  # Satırdaki sayıyı oku ve tamsayıya dönüştür
         if is_prime(number):
             primes.append(number)  # Asal sayıyı listeye ekle
+
         if number % 2 == 0:
             evens.append(number)   # Çift sayıyı listeye ekle
         else:

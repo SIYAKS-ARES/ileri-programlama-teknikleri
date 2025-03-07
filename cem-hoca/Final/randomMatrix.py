@@ -1,3 +1,65 @@
+print("\nSimple as possible:")
+
+import random
+
+# 1. Rastgele veri oluşturma
+num_employees = 8
+num_days = 7
+
+# Boş bir matris oluşturuyoruz
+work_hours_matrix = []
+
+# Her çalışanın haftalık çalışma saatlerini oluşturuyoruz
+for _ in range(num_employees):
+    # 7 gün için rastgele çalışma saatleri oluşturuyoruz
+    hours = []
+    for _ in range(num_days):
+        hour = random.randint(1, 8)  # 1 ile 8 saat arasında rastgele bir saat
+        hours.append(hour)  # Bu saati günler listesine ekliyoruz
+    work_hours_matrix.append(hours)  # Bu günler listesini matrisimize ekliyoruz
+
+# Rastgele oluşturulan matrisin yazdırılması
+print("Rastgele Çalışma Saatleri Matrisi:")
+for hours in work_hours_matrix:
+    print(hours)
+
+# 2. Toplam çalışma saatlerini hesaplama
+totals = []
+
+# Her çalışanın toplam çalışma saatlerini hesaplıyoruz
+for hours in work_hours_matrix:
+    total_hours = 0
+    for hour in hours:
+        total_hours += hour  # Her günün saatlerini topluyoruz
+    totals.append(total_hours)  # Toplam saatleri listeye ekliyoruz
+
+# 3. Çalışanları toplam saatlere göre sıralama
+sorted_indices = []
+
+# Çalışanların indekslerini toplam saatlere göre sıralıyoruz
+for i in range(num_employees):
+    sorted_indices.append((i, totals[i]))  # Her çalışan ve toplam saatini tuple olarak ekliyoruz
+
+# Listeyi toplam saatlere göre sıralıyoruz (büyükten küçüğe)
+sorted_indices.sort(key=lambda x: x[1], reverse=True)
+
+# Sıralı matris oluşturma
+sorted_matrix = []
+
+# Sıralı indeksleri kullanarak matrisimizi sıralıyoruz
+for index, _ in sorted_indices:
+    sorted_matrix.append(work_hours_matrix[index])  # Sıralı matris oluşturuyoruz
+
+# Sıralı matrisi yazdırıyoruz
+print("\nToplam Çalışma Saatlerine Göre Sıralanmış Matris:")
+for hours in sorted_matrix:
+    print(hours)
+
+# Sıralı toplam saatleri yazdırıyoruz
+print("\nÇalışanların Toplam Çalışma Saatleri (Sıralı):")
+for index, total in sorted_indices:
+    print(f"Çalışan {index + 1}: {total} saat")
+
 import numpy as np
 
 print("With Numpy:")
@@ -27,7 +89,7 @@ sorted_work_hours_matrix = work_hours_matrix[sorted_indices]
 print("\nToplam Çalışma Saatlerine Göre Sıralanmış Matris:\n", sorted_work_hours_matrix)
 print("\nÇalışanların Toplam Çalışma Saatleri (Sıralı):", [x[1] for x in sorted_employee_total_hours])
 
-
+'''
 import random
 
 print("\nWithout Numpy:")
@@ -101,67 +163,4 @@ print("\nToplam Çalışma Saatlerine Göre Sıralanmış Matris:")
 for row in sorted_work_hours_matrix:
     print(row)
 
-print("\nÇalışanların Toplam Çalışma Saatleri (Sıralı):", [x[1] for x in sorted_employee_total_hours])
-
-print("\nSimplest as possible:")
-
-import random
-
-# 1. Rastgele veri oluşturma
-num_employees = 8
-num_days = 7
-
-# Boş bir matris oluşturuyoruz
-work_hours_matrix = []
-
-# Her çalışanın haftalık çalışma saatlerini oluşturuyoruz
-for _ in range(num_employees):
-    # 7 gün için rastgele çalışma saatleri oluşturuyoruz
-    hours = []
-    for _ in range(num_days):
-        hour = random.randint(1, 8)  # 1 ile 8 saat arasında rastgele bir saat
-        hours.append(hour)  # Bu saati günler listesine ekliyoruz
-    work_hours_matrix.append(hours)  # Bu günler listesini matrisimize ekliyoruz
-
-# Rastgele oluşturulan matrisin yazdırılması
-print("Rastgele Çalışma Saatleri Matrisi:")
-for hours in work_hours_matrix:
-    print(hours)
-
-# 2. Toplam çalışma saatlerini hesaplama
-totals = []
-
-# Her çalışanın toplam çalışma saatlerini hesaplıyoruz
-for hours in work_hours_matrix:
-    total_hours = 0
-    for hour in hours:
-        total_hours += hour  # Her günün saatlerini topluyoruz
-    totals.append(total_hours)  # Toplam saatleri listeye ekliyoruz
-
-# 3. Çalışanları toplam saatlere göre sıralama
-sorted_indices = []
-
-# Çalışanların indekslerini toplam saatlere göre sıralıyoruz
-for i in range(num_employees):
-    sorted_indices.append((i, totals[i]))  # Her çalışan ve toplam saatini tuple olarak ekliyoruz
-
-# Listeyi toplam saatlere göre sıralıyoruz (büyükten küçüğe)
-sorted_indices.sort(key=lambda x: x[1], reverse=True)
-
-# Sıralı matris oluşturma
-sorted_matrix = []
-
-# Sıralı indeksleri kullanarak matrisimizi sıralıyoruz
-for index, _ in sorted_indices:
-    sorted_matrix.append(work_hours_matrix[index])  # Sıralı matris oluşturuyoruz
-
-# Sıralı matrisi yazdırıyoruz
-print("\nToplam Çalışma Saatlerine Göre Sıralanmış Matris:")
-for hours in sorted_matrix:
-    print(hours)
-
-# Sıralı toplam saatleri yazdırıyoruz
-print("\nÇalışanların Toplam Çalışma Saatleri (Sıralı):")
-for index, total in sorted_indices:
-    print(f"Çalışan {index + 1}: {total} saat")
-
+print("\nÇalışanların Toplam Çalışma Saatleri (Sıralı):", [x[1] for x in sorted_employee_total_hours])'''
